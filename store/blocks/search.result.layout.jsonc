@@ -16,11 +16,11 @@
           "search-not-found-layout"
       ]
   },
-  "search-result-layout.customQuery#desafios": {
+  "search-result-layout.customQuery#divertidos": {
       "props": {
           "querySchema": {
-              "queryField": "desafios",
-              "mapField": "category-2",
+              "queryField": "divertidos",
+              "mapField": "ft",
               "orderByField": "OrderByNameASC",
               "hideUnavailableItems": true,
               "maxItemsPerPage": 8,
@@ -166,29 +166,38 @@
           "search-result-layout.desktop"
       ]
   },
-  "search-result-layout.desktop":{
-    "children": ["flex-layout.row#shelf"]
-  },
-  "flex-layout.row#shelf": {
-    "children": ["list-context.product-list#demo1"]
-  },
-  "list-context.product-list#demo1": {
-    "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#demo-products"],
+  "search-result-layout.desktop": {
+    "children": [
+      "list-context.image-list#demo",
+      "flex-layout.row#top",
+      "search-fetch-previous",
+      "flex-layout.row#results",
+      "search-fetch-more"
+    ],
     "props": {
-      "orderBy": "OrderByTopSaleDESC"
+      "pagination": "show-more",
+      "preventRouteChange": true
     }
   },
-  "slider-layout#demo-products": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 5,
-        "tablet": 3,
-        "phone": 1
-      },
-      "infinite": true,
-      "fullWidth": false,
-      "blockClass": "shelf"
-    }
+  "flex-layout.row#top": { 
+    "children": [
+      "total-products.v2"
+    ]
+  },
+  "flex-layout.row#results": { 
+    "children": [ 
+      "flex-layout.col#search"
+    ]
+  },
+  "flex-layout.col#search": { 
+    "children": [
+      "search-content"
+    ]
+  },
+  "search-content": { 
+    "blocks": ["gallery", "not-found"]
+  },
+  "gallery": {
+    "blocks": ["product-summary.shelf"]
   }
 }
