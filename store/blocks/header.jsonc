@@ -22,17 +22,28 @@
       "verticalAlign": "center",
       "preventHorizontalStretch": true,
       "preventVerticalStretch": true,
-      "fullWidth": true
+      "fullWidth": true,
+      "background-color":"black"
     },
     "children": [
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
       "search-bar",
-      "locale-switcher",
-      "login",
-      "minicart.v2"
+      "flex-layout.col#spacer",
+      "minicart.v2",
+      "flex-layout.col#spacer"
     ]
   },
+  "search-bar" :{
+    "props": {
+      "width": "grow",
+      "horizontalAlign": "center",
+      "displayMode": "clear-buttons",
+      "compactMode": true,
+      "placeholder" : "BUSCAR"
+    }
+  },
+
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
@@ -48,8 +59,8 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
-      "width": "80"
+      "url": "https://github.com/rogeriolabat/vtex-gama-hiring-coders-desafio3/blob/master/store/images/logoUPMedal.png?raw=true",
+      "width": "180"
     }
   },
   "header-layout.mobile": {

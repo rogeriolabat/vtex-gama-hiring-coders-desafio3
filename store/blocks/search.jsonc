@@ -1,7 +1,11 @@
 {
   "store.search": {
-    "blocks": [
-      
-    ]
+    "blocks": ["search-result-layout"],
+    "props": {
+      "context": {
+        "skusFilter": "ALL",
+        "simulationBehavior": "skip"
+      }
+    }
   }
 }

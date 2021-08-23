@@ -1,15 +1,128 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "flex-layout.row",
+      "list-context.image-list#demo",
+      "search-result-layout.customQuery#promocao"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+  "flex-layout.row":{
+    "children": [
+      "tab-layout#home"
+    ]
+  },
+  "tab-layout#home": {
+    "children": [
+      "tab-list#home",
+      "tab-content#home"
+    ],
+    "props": {
+      "blockClass": "home",
+      "defaultActiveTabId": "home1"
+      }
+  },
+  "tab-list#home": {
+    "children": [
+      "tab-list.item#home1",
+      "tab-list.item#home2",
+      "tab-list.item#home3",
+      "tab-list.item#home4",
+      "tab-list.item#home5",
+      "tab-list.item#home6",
+      "tab-list.item#home7",
+      "tab-list.item#home8",
+      "tab-list.item#home9"
+    ]
+  },
+  "tab-list.item#home1": {
+    "props": {
+      "tabId": "promo",
+      "label": "Promoção",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home2": {
+    "props": {
+      "tabId": "corinthians",
+      "label": "Corinthians"
+    }
+  },
+  "tab-list.item#home3": {
+    "props": {
+      "tabId": "palmeiras",
+      "label": "Palmeiras"
+    }
+  },
+  "tab-list.item#home4": {
+    "props": {
+      "tabId": "signos",
+      "label": "Signos"
+    }
+  },
+  "tab-list.item#home5": {
+    "props": {
+      "tabId": "divertidos",
+      "label": "Divertidos"
+    }
+  },
+  "tab-list.item#home6": {
+    "props": {
+      "tabId": "7maravilhas",
+      "label": "7Maravilhas"
+    }
+  },
+  "tab-list.item#home7": {
+    "props": {
+      "tabId": "guerreiros",
+      "label": "Guerreiros"
+    }
+  },
+  "tab-list.item#home8": {
+    "props": {
+      "tabId": "album1",
+      "label": "Álbum1"
+    }
+  },
+  "tab-list.item#home9": {
+    "props": {
+      "tabId": "album2",
+      "label": "Álbum2"
+    }
+  },
+  "tab-list.item#home10": {
+    "props": {
+      "tabId": "album3",
+      "label": "Álbum3"
+    }
+  },
+  "tab-content#home": {
+   "children": [
+     "tab-content.item#home1"
+   ]
+ },
+ "tab-content.item#home1": {
+   "children": [
+    "search-result-layout.customQuery#promocao"
+   ],
+   "props": {
+     "tabId": "promo"
+   }
+ },
+ "tab-content.item#home2": {
+  "children": [
+   "search-result-layout.customQuery#corinthians"
+  ],
+  "props": {
+    "tabId": "corinthians"
     }
   }
+  ,
+  "tab-content.item#home3": {
+   "children": [
+    "search-result-layout.customQuery#palmeiras"
+   ],
+   "props": {
+     "tabId": "palmeiras"
+     }
+   }
 }

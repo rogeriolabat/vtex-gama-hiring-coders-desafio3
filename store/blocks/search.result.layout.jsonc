@@ -1,0 +1,194 @@
+{
+  "search-result-layout.customQuery#promocao": {
+      "props": {
+          "querySchema": {
+              "orderByField": "OrderByBestDiscountDESC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "queryField": "UpMedal",
+              "mapField": "ft",
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop",
+          "search-result-layout.mobile",
+          "search-not-found-layout"
+      ]
+  },
+  "search-result-layout.customQuery#desafios": {
+      "props": {
+          "querySchema": {
+              "queryField": "desafios",
+              "mapField": "category-2",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#corinthians": {
+      "props": {
+          "querySchema": {
+              "queryField": "Corinthians",
+              "mapField": "ft",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#palmeiras": {
+      "props": {
+          "querySchema": {
+              "queryField": "Palmeiras",
+              "mapField": "ft",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#guerreiros": {
+      "props": {
+          "querySchema": {
+              "queryField": "guerreiros",
+              "mapField": "category-3",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#signos": {
+      "props": {
+          "querySchema": {
+              "queryField": "signos",
+              "mapField": "category-3",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#medalhas": {
+      "props": {
+          "querySchema": {
+              "queryField": "medalhas",
+              "mapField": "category-2",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#camisetas": {
+      "props": {
+          "querySchema": {
+              "queryField": "camisetas",
+              "mapField": "category-2",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#bones": {
+      "props": {
+          "querySchema": {
+              "queryField": "bones",
+              "mapField": "category-2",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#oculos": {
+      "props": {
+          "querySchema": {
+              "queryField": "oculos",
+              "mapField": "category-2",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.customQuery#combos": {
+      "props": {
+          "querySchema": {
+              "queryField": "Combo",
+              "mapField": "ft",
+              "orderByField": "OrderByNameASC",
+              "hideUnavailableItems": true,
+              "maxItemsPerPage": 8,
+              "skusFilter": "ALL_AVAILABLE"
+          }
+      },
+      "blocks": [
+          "search-result-layout.desktop"
+      ]
+  },
+  "search-result-layout.desktop":{
+    "children": ["flex-layout.row#shelf"]
+  },
+  "flex-layout.row#shelf": {
+    "children": ["list-context.product-list#demo1"]
+  },
+  "list-context.product-list#demo1": {
+    "blocks": ["product-summary.shelf"],
+    "children": ["slider-layout#demo-products"],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "slider-layout#demo-products": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 3,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "blockClass": "shelf"
+    }
+  }
+}
